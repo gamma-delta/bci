@@ -1,0 +1,86 @@
+// My additions
+
+main>* {
+    h1::before {
+        content: '# ';
+    }
+
+    h2::before {
+        content: '## ';
+    }
+
+    h3::before {
+        content: '### ';
+    }
+
+    h4::before {
+        content: '#### ';
+    }
+
+    h5::before {
+        content: '##### ';
+    }
+
+    h6::before {
+        content: '###### ';
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $brand-color;
+    }
+
+    @each $h in (h1 h2 h3 h4 h5 h6) {
+        #{$h}::before {
+            color: $text-color;
+        }
+    }
+}
+
+
+main .home * {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0;
+    }
+}
+
+
+$dynamo-color: #3fab79;
+$dynamo-hilight: #a4d45d;
+
+div.dynamo-embed {
+    border: 0.4em double $dynamo-color;
+    margin: 2em;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.dynamo-embed {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: $dynamo-color;
+
+    b,
+    em,
+    .hilight {
+        color: $dynamo-hilight
+    }
+}
+
+hr {
+    border: none;
+}
+
+hr::after {
+    content: '========';
+}
