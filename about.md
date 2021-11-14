@@ -12,3 +12,7 @@ stories alongside practical code samples.
 
 This blog is a work of fiction, by the way. Just to be clear. It's actually written by Petra,
 a computer programmer also living in the American Midwest.
+
+---
+
+This blog uses [Plausible Analytics](https://plausible.io/), self-hosted on a free Oracle compute instance.
