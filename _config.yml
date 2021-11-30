@@ -57,5 +57,6 @@ plugins:
 #   - vendor/ruby/
 
 future: true
+show_excerpts: true
 
 date_format: "%a %b %-d, %Y"

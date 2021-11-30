@@ -4,13 +4,13 @@ title: Tags
 permalink: /tags/
 ---
 
-{% for tag in site.tags %}
-    <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
-    <ul>
+{% assign sorted = site.tags | sort %}
+{% for tag in sorted %}
+    <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    <ul class="post-list">
     {% for post in tag[1] %}
         <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <span class="post-meta">({{ post.date | date: site.date_format }})</span>
+            {%- include post-preview.html post=post -%}
         </li>
     {% endfor %}
     </ul>

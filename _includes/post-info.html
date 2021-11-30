@@ -1,0 +1,14 @@
+<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+{{ include.post.date | date: site.date_format }}
+</time>
+|
+{{ include.post.content | number_of_words }} words
+|
+[ 
+{%- for tag in include.post.tags -%}
+    <a href="{{ 'tags#' | append: tag | relative_url }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
+{%- endfor -%}
+]
+{% if include.post.author %}
+ • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ include.post.author }}</span></span>
+{% endif %}

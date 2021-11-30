@@ -1,0 +1,13 @@
+<h3>
+    <a class="post-link" href="{{ include.post.url | relative_url }}">
+    {{ include.post.title | escape }}
+    </a>
+</h3>
+<span class="post-meta">
+    {% include post-info.html post=include.post %}
+</span>
+{%- if site.show_excerpts -%}
+    <blockquote>
+        <p>{{ include.post.excerpt }}</p>
+    </blockquote>
+{%- endif -%}
