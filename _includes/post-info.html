@@ -1,5 +1,5 @@
 <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-{{ include.post.date | date: site.date_format }}
+{{ include.post.date | date: "%a %b %-d, " }} {{ include.post.spoofedYear | default: 2031 }}
 </time>
 |
 {{ include.post.content | number_of_words }} words

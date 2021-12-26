@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More Robotics Club
-date: 2031-10-18 18:40:00
+date: 2021-10-18 18:40:00
 tags: life robotics code raspi
 ---
 
